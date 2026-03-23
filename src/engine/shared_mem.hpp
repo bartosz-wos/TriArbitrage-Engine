@@ -13,8 +13,8 @@ struct Edge{
 
 struct alignas(64) ShmStruct{
 	std::atomic<uint64_t> seq;
-	int last_upd_edge_id;
-	int num_nodes;
-	int num_edges;
+	int64_t last_upd_edge_id;
+	int64_t num_nodes;
+	int64_t num_edges;
 	Edge edges[MAX_EDGES];
 };
